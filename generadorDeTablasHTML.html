@@ -15,7 +15,10 @@ const valorDeEntrada = () =>{
   filas = "&lt;tr&gt;" + "&lt;td&gt;Fila&lt;/td&gt;".repeat(insertcolumnas) + "&lt;/tr&gt;<br>";
   columnas = "&lt;tr&gt;" + "&lt;th&gt;Cabecera&lt;/th&gt;".repeat(insertcolumnas) + "&lt;/tr&gt;<br>";
   row = filas.repeat(insertfilas)
-  inputValue = columnas + row;
+  tableinicio = '&lt;table class="tableclass"&gt;<br>';
+  tablefin = '&lt;/table&gt;';
+
+  inputValue = tableinicio + columnas + row + tablefin;
   document.getElementById("valueInput").innerHTML = inputValue; 
 }
 </script>
