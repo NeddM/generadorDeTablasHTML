@@ -1,0 +1,22 @@
+<body>
+<label for="numeroColumnas">Columnas: </label><br>
+<input type="text" id="numeroColumnas"> <br><br>
+<label for="numeroFilas">Filas: </label><br>
+<input type="text" id="numeroFilas"> <br><br>
+<button type="button" onclick="valorDeEntrada()">¡Generar!</button> 
+<p id="valueInput"></p>
+<br><br><br>
+<p id="representacion"></p>
+
+<script>
+const valorDeEntrada = () =>{
+  let insertcolumnas = document.getElementById("numeroColumnas").value; 
+  let insertfilas = document.getElementById("numeroFilas").value - 1; 
+  filas = "&lt;tr&gt;" + "&lt;td&gt;Fila&lt;/td&gt;".repeat(insertcolumnas) + "&lt;/tr&gt;<br>";
+  columnas = "&lt;tr&gt;" + "&lt;th&gt;Cabecera&lt;/th&gt;".repeat(insertcolumnas) + "&lt;/tr&gt;<br>";
+  row = filas.repeat(insertfilas)
+  inputValue = columnas + row;
+  document.getElementById("valueInput").innerHTML = inputValue; 
+}
+</script>
+</body>
